@@ -33,6 +33,13 @@ public class GreeterTester {
         String greeting4 = "The new name for otherGreeter: "+otherGreeter.getName();
         System.out.println(greeting3);
         System.out.println(greeting4);
+               
+        /*
+         Code to test the new getRandomInstance by saying Hello
+        */ 
+        Greeter randomGreeter = Greeter.getRandomInstance();
+        String randomGreeting = randomGreeter.sayHello();
+        System.out.println("\nUsing Random to say Hello- "+randomGreeting);        
         
         /*
         Creating 2 Greeter variables that point to the same Greeter object.
@@ -52,7 +59,7 @@ public class GreeterTester {
         Calling sayHello on that object
         */
         Scanner userName = new Scanner(System.in);
-        System.out.println("What is your name?");
+        System.out.println("\nWhat is your name?");
         String testingName = userName.nextLine();
         Greeter objectThree = new Greeter(testingName);
         String userNameTest= objectThree.sayHello();
@@ -67,7 +74,7 @@ public class GreeterTester {
         /*
         A NullPointException is thrown as we are invoking a method on a 
         null reference. The number behind the file name tells us the line
-        number on which the excepption is thrown. For this program, it's 66.
+        number on which the excepption is thrown. For this program, it's 73.
         */
     }
     
